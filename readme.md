@@ -7,20 +7,21 @@ ___
 Desenvolver um sistema inteligente que monitore em tempo real variáveis como temperatura, corrente elétrica, vibração e tempo de operação da máquina de solda. Com esses dados, será possível identificar padrões que antecedem falhas, emitir alertas automáticos e gerar relatórios preditivos para manutenção preventiva.
 ___
 ## 🔧 Tecnologias Envolvidas
-| Componente   | Tecnologia |
-| :---------- | :--------- |
-| Coleta de Dados	| ESP32 + sensores físicos | 
-| Transmissão	 | MQTT ou HTTP | 
-| Armazenamento	 | PostgreSQL (RDS), SQLite (local) | 
-| Processamento	| Python, Pandas, Scikit-learn | 
-| Modelagem IA	| Scikit-learn ou TensorFlow | 
-| Visualização	| Grafana, Streamlit ou Dash | 
-| Hospedagem	| AWS EC2, AWS S3, ou local | 
-| Comunicação	| Telegram Bot ou E-mail | 
+| Componente        | Tecnologia                          |
+| :---------------- | :---------------------------------- |
+| Coleta de Dados	  | ESP32 + sensores físicos            | 
+| Transmissão	      | MQTT ou HTTP                        | 
+| Armazenamento	    | PostgreSQL (RDS), SQLite (local)    | 
+| Processamento   	| Python, Pandas, Scikit-learn        | 
+| Modelagem IA	    | Scikit-learn ou TensorFlow          | 
+| Visualização	    | Grafana, Streamlit ou Dash          | 
+| Hospedagem	      | AWS EC2, AWS S3, ou local           | 
+| Comunicação     	| Telegram Bot ou E-mail              | 
 ___
 ## 🧱 Arquitetura da Solução (Pipeline de Dados)
 1. Coleta de Dados (Sensores IoT):
-o	Sensores utilizados:
+   
+Sensores utilizados:
 - Termopar ou sensor de temperatura (TMP36);
 - Acelerômetro (MPU-6050);
 - Sensor de corrente elétrica (ACS712);
@@ -74,3 +75,17 @@ ___
 3. Desenho do pipeline e arquitetura.
 4. Montagem do repositório com README explicativo.
 5. Divisão de responsabilidades entre os membros do grupo.
+
+___
+## 👤 Divisão de atividades
+
+| Colaborador         | Atividades                               |
+| :------------------ | :--------------------------------------- |
+|**Lucas Martinelli** | Coleta de dados dos sensores             |
+|**Lucas Martinelli** | Transmissão dos dados.                   |
+|**Lais Kurahashi**   | Armazenamento dos dados coletados        |
+|**Lais Kurahashi**   | processamento inicial dos dados coletados|
+|**Davi Ferreira**    | Desenvolvimento de pipelines             |
+|**Davi Ferreira**    | Desenvolvimento da vizualização gráfica  |
+|**Davi Ferreira**    | Modelagem machine learning               |
+|**Davi Ferreira**    | Alertas (Email/Telegram)                 |
