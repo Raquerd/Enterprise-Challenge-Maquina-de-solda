@@ -48,3 +48,29 @@ Controlador: ESP32 (com Wi-Fi ou MQTT para envio de dados).
 6. Armazenamento dos Modelos e Logs:
 - Modelos treinados salvos em bucket na AWS S3;
 - Logs e resultados também podem ser armazenados em CloudWatch ou banco de logs.
+___
+## 📦 Estratégia de Dados
+**Coleta simulada:** 
+
+Nesta fase utilizaremos a simulação de dados para representar os sinais que seriam coletados da máquina de solda. Isso permite:
+Criação de um gerador de dados em Python:
+
+Script Python que gera dados de sensores com base em faixas realistas de operação de uma máquina de solda.
+
+**As variáveis simuladas incluem:**
+- Temperatura (°C) com variação de 25 °C a 90 °C
+- Corrente elétrica (A): entre 100 A e 300 A
+- Vibração (m/s²)
+- Tempo de operação (s): contador que se acumula a cada ciclo
+- Status de falha: binário com os valores 0 (normal) ou 1 (anomalia), com base em regras simples ou probabilidade.
+
+**Simulação de falhas intencionais:**
+- Para treinar os modelos de machine learning, o script deve gerar situações de anomalia em determinados momentos.
+- Exemplo: após 100 ciclos, temperatura ultrapassa 85 °C com alta vibração, simulando superaquecimento.
+___
+## 📋 Plano Inicial de Desenvolvimento
+1. Levantamento de variáveis críticas de falha.
+2. Simulação de coleta de dados com script e I.A(Chat GPT, Gemini, Claude).
+3. Desenho do pipeline e arquitetura.
+4. Montagem do repositório com README explicativo.
+5. Divisão de responsabilidades entre os membros do grupo.
